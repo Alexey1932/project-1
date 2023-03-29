@@ -1,0 +1,217 @@
+.service {
+	position: relative;
+	padding-top: 0px;
+	padding-bottom: 30px;
+
+	.button {
+		padding-left: 20px;
+	}
+
+	&:before {
+		content: "";
+		display: block;
+		width: 100%;
+		min-width: 250px;
+		height: 100%;
+		background-color: #66334688;
+
+		position: absolute;
+		top: -50%;
+		bottom: 50%;
+		left: 0;
+		z-index: -1;
+	}
+}
+
+.service__heading {
+	margin-bottom: 20px;
+	text-align: center;
+
+	p {
+		font-size: 20px;
+		text-indent: 0;
+	}
+}
+
+.service__row {
+	display: flex;
+	justify-content: space-between;
+	align-items: stretch;
+	column-gap: 30px;
+}
+
+.card-customer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 50%;
+	padding: 40px 80px;
+	background-color: white;
+	box-shadow: 0px 30px 52px -22px rgba(0, 0, 0, 0.8);
+	border-radius: 15px;
+	text-align: center;
+	transition: 0.3s ease-in;
+	margin: 0 10px;
+
+	&__icon {
+		margin-bottom: 15px;
+		fill: $main-color;
+		transition: fill 0.2s ease-in;
+	}
+
+	&:hover {
+		background-color: $main-color;
+		color: white;
+
+		.card-customer__icon {
+			fill: white;
+		}
+
+		.card-customer__title {
+			color: white;
+		}
+
+		.button {
+			background-color: white;
+			color: $main-color;
+		}
+	}
+}
+
+.card-customer__text {
+	margin-bottom: 25px;
+}
+
+.card-customer--unity {
+	display: none;
+}
+
+@media (max-width: 1000px) {
+	.card-customer {
+		padding: 30px 50px;
+
+		.card-customer__title {
+			font-size: 34px;
+		}
+
+		.card-customer__text {
+			font-size: 16px;
+			text-indent: 0;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.card-customer {
+		padding: 20px;
+		display: none;
+
+		&__icon {
+			margin-bottom: 0;
+		}
+	}
+
+	.card-customer--unity {
+		display: block;
+		margin: 0 auto;
+		width: 60%;
+	}
+
+	.service__heading {
+		h2 {
+			font-size: 30px;
+		}
+		p {
+			font-size: 18px;
+		}
+	}
+
+	.card-customer__text {
+		margin-bottom: 10px;
+		p {
+			text-indent: 0 !important;
+		}
+	}
+	.agreement {
+		text-align: left;
+	}
+}
+
+@media (max-width: 520px) {
+	.card-customer__icon {
+		transform: scale(0.8);
+	}
+
+	.card-customer {
+		padding: 15px;
+
+		.card-customer__title {
+			font-size: 20px;
+		}
+
+		.card-customer__text {
+			font-size: 14px;
+			text-indent: 0;
+		}
+
+		.popup__label {
+			width: 85%;
+		}
+
+		.button {
+			font-size: 14px;
+			padding-right: 20px;
+			text-indent: 0;
+			transform: scale(0.8);
+		}
+	}
+
+	.card-customer--unity {
+		display: flex;
+		margin: 0 auto;
+	}
+
+	.service__heading {
+		h2 {
+			font-size: 20px;
+			width: unset;
+		}
+		p {
+			font-size: 14px;
+			width: unset;
+		}
+	}
+}
+
+@media (max-width: 400px) {
+	.card-customer {
+		padding: 5px;
+
+		.card-customer__title {
+			font-size: 16px;
+		}
+
+		.card-customer__text {
+			font-size: 12px;
+			text-indent: 0;
+		}
+
+		.button {
+			font-size: 12px;
+		}
+	}
+
+	.service__heading {
+		h2 {
+			font-size: 16px;
+		}
+		p {
+			font-size: 12px;
+		}
+	}
+}
+
+.form-pu-3 {
+	color: $main-color-hover;
+}

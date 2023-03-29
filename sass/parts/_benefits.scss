@@ -1,0 +1,162 @@
+.benefits {
+	padding-top: 20px;
+	padding-bottom: 30px;
+}
+
+.benefits__heading {
+	padding-bottom: 30px;
+	text-align: center;
+}
+
+.benefits__row {
+	display: flex;
+	justify-content: space-between;
+	column-gap: 35px;
+}
+
+.time-count {
+	background: #fff;
+	box-shadow: 4px 8px 40px rgba(8, 24, 111, 0.2);
+	border-radius: 30px;
+	max-width: 796px;
+	height: auto;
+	padding: 55px 66px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.sale {
+	position: absolute;
+	right: -40px;
+	top: -40px;
+}
+
+.time-count__title {
+	margin: 0;
+	margin-bottom: 35px;
+	font-weight: 700;
+	font-size: 40px;
+	line-height: 47px;
+	text-align: center;
+	color: $main-color;
+}
+
+.time-count__content {
+	display: flex;
+	justify-content: center;
+}
+
+.time-count__item {
+	text-align: center;
+}
+
+.time-count__val {
+	min-width: 81px;
+	font-weight: 700;
+	font-size: 70px;
+	line-height: 82px;
+	color: $main-color;
+}
+
+.time-count__separator {
+	font-weight: 700;
+	font-size: 48px;
+	line-height: 74px;
+	text-align: center;
+	color: $main-color;
+	margin: 0 33px;
+}
+
+.time-count__text {
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 20px;
+	color: $main-color;
+}
+
+@media (max-width: 1000px) {
+	.benefits {
+		h2 {
+			font-size: 30px;
+		}
+	}
+
+	.time-count__val,
+	.time-count__separator {
+		font-size: 35px;
+	}
+
+	.time-count,
+	.benefits__heading {
+		max-width: 95%;
+		margin: 0 auto;
+	}
+
+	.sale {
+		display: none;
+	}
+}
+
+@media (max-width: 720px) {
+	.benefits {
+		h2 {
+			font-size: 22px;
+		}
+
+		.title {
+			display: none;
+		}
+
+		.time-count__title {
+			line-height: 1.4;
+			margin-bottom: 5px;
+			span {
+				display: none;
+			}
+		}
+	}
+
+	.time-count {
+		padding: 22px 33px;
+	}
+
+	.time-count__val,
+	.time-count__separator {
+		font-size: 30px;
+	}
+
+	.time-count__separator {
+		margin: 0 5px;
+	}
+}
+
+@media (max-width: 410px) {
+	.benefits {
+		h2 {
+			font-size: 15px;
+		}
+	}
+	.time-count__val {
+		line-height: 30px;
+	}
+	.time-count__separator {
+		line-height: 25px;
+	}
+
+	.time-count {
+		padding: 11px 22px;
+	}
+
+	.time-count__val,
+	.time-count__separator {
+		font-size: 20px;
+	}
+
+	.time-count__val {
+		min-width: 40px;
+	}
+
+	.time-count__text {
+		font-size: 10px;
+	}
+}

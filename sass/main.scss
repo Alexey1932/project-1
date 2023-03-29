@@ -1,0 +1,91 @@
+// Start
+@import "./start/vars";
+@import "./start/reset";
+@import "./start/base";
+
+// Parts
+@import "./parts/navigation";
+@import "./parts/navigation-list";
+@import "./parts/header";
+@import "./parts/form";
+@import "./parts/button";
+@import "./parts/facts";
+@import "./parts/objects";
+@import "./parts/title";
+@import "./parts/promo";
+@import "./parts/service";
+@import "./parts/benefits";
+@import "./parts/reviews";
+@import "./parts/footer";
+@import "./parts/carousel";
+@import "./parts/popup";
+
+.none {
+	display: none !important;
+}
+
+@media (max-width: 1150px) {
+	.navigation-list {
+		display: none;
+	}
+
+	.nav {
+		padding: 20px 10px;
+	}
+
+	.nav__toggle {
+		display: block;
+	}
+
+	.no-scroll {
+		overflow-y: hidden;
+	}
+
+	.nav--mobile {
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 99;
+
+		flex-direction: column;
+		justify-content: center;
+		row-gap: 50px;
+		align-items: center;
+		padding-top: 40px;
+		padding-bottom: 40px;
+
+		background: white;
+	}
+
+	.nav--mobile .logo {
+		padding-top: 80px;
+		font-size: 34px;
+		text-align: left;
+	}
+
+	.nav--mobile .navigation-list {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		row-gap: 40px;
+		font-size: 22px;
+
+		li {
+			margin-right: 0;
+		}
+	}
+
+	.nav--mobile .navigation-list a.active::after,
+	.nav--mobile .navigation-list a:hover::after {
+		display: none;
+	}
+
+	.nav--mobile .nav__toggle {
+		position: fixed;
+		top: 45px;
+		right: 10px;
+	}
+}

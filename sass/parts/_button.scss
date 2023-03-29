@@ -1,0 +1,61 @@
+.button {
+	display: inline-block;
+	height: 58px;
+	padding-left: 37px;
+	padding-right: 37px;
+	border-radius: 29px;
+	background-color: $main-color;
+
+	line-height: 58px;
+	font-weight: 700;
+	color: #fff;
+	transition: background-color 0.3s ease-in;
+	position: relative;
+	top: 0;
+	cursor: pointer;
+	&:hover {
+		background-color: $main-color-hover;
+	}
+
+	&:active {
+		top: 2px;
+	}
+
+	&--white {
+		width: 100%;
+		background-color: #fff;
+		color: $black;
+		transition: background-color 0.2s ease-in, color 0.2s ease-in;
+		text-align: center;
+
+		&:hover {
+			background-color: $black;
+			color: #fff;
+		}
+	}
+
+	&--play {
+		position: relative;
+
+		&::before {
+			position: absolute;
+			left: 30px;
+			top: 50%;
+			transform: translateY(-50%);
+
+			content: "";
+			display: block;
+			width: 20px;
+			height: 20px;
+
+			background-image: url("./../img/icons/play.svg");
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+	}
+}
+
+.button__text {
+	font-size: 22px;
+	padding-left: 25px;
+}

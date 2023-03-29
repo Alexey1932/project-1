@@ -1,0 +1,166 @@
+.objects {
+	padding: 30px 0;
+}
+
+.objects__row {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow-x: hidden;
+
+	@media (max-width: 1495px) {
+		justify-content: flex-end;
+	}
+}
+
+.objects__img {
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-start;
+}
+
+.objects__text {
+	width: 374px;
+	padding-left: 181px;
+	padding-right: 150px;
+	box-sizing: content-box;
+
+	flex-shrink: 0;
+
+	p + p {
+		margin-top: 20px;
+	}
+}
+
+.objects__title {
+	margin-bottom: 20px;
+}
+
+.objects__button {
+	margin-top: 40px;
+}
+
+.img-card {
+	position: relative;
+	width: 410px;
+	height: 570px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	border-radius: 20px 20px 0 20px;
+	background-color: $main-color;
+	background-blend-mode: overlay;
+	& + & {
+		margin-left: 32px;
+	}
+}
+
+.img-card-1 {
+	background-image: url("../img/cards/01.jpg");
+	border-radius: 20px;
+}
+
+.img-card-2 {
+	background-image: url("../img/cards/02.jpg");
+	position: relative;
+}
+
+.img-card__info {
+	position: absolute;
+	right: -66px;
+	bottom: 87px;
+	margin-left: 60px;
+}
+
+.card-info {
+	display: flex;
+	align-items: center;
+
+	padding: 30px;
+	background: #ffffff;
+	box-shadow: 4px 20px 42px -2px rgba(0, 0, 0, 0.32);
+	border-radius: 15px;
+}
+
+.card-info__icon {
+	margin-right: 20px;
+}
+
+.card-info__title {
+	font-weight: 700;
+}
+
+@media (max-width: 1300px) {
+	.objects__text {
+		padding-left: 120px;
+		padding-right: 90px;
+	}
+}
+
+@media (max-width: 1110px) {
+	.objects__text {
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+
+	.img-card__info {
+		display: none;
+	}
+}
+
+@media (max-width: 830px) {
+	.img-card-2 {
+		border-radius: 0;
+		min-width: 100%;
+	}
+
+	.objects__row {
+		flex-direction: column;
+		position: relative;
+	}
+
+	.objects__text {
+		position: absolute;
+		padding: 0;
+		color: white;
+		bottom: 60px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		h2,
+		p {
+			text-align: center;
+		}
+	}
+
+	.objects__title {
+		color: white;
+	}
+}
+
+@media (max-width: 400px) {
+	.container {
+		width: 100%;
+		padding: 0;
+		min-width: 250px;
+	}
+
+	.objects__row {
+		p {
+			padding: 8px 10px;
+		}
+	}
+
+	.objects__text {
+		text-align: center;
+		font-size: 16px;
+		width: 100%;
+		bottom: 60px;
+
+		.objects__title.title {
+			padding: 0 10px;
+			color: white;
+			font-size: 26px;
+		}
+	}
+}
